@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer>
       <p>Copyright &copy; 2021</p>
-      <Button text = "Contact us" color ='black'/>
+      
     </footer>
   )
 }

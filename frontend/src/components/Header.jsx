@@ -4,9 +4,11 @@ const Header = ({ title }) => {
   return (
     <header className = 'header'>
       <h1>{title}</h1>
-      <Button text = "Avalam" color ='black'/>
-      <Button text = "Options" color ='black'/>
-      <Button text = "Profile" color ='black'/>
+      
+      <Button text = "Transcription" color ='black'/>
+      <Button text = "Handwriting Recognition" color ='black'/>
+      <Button text = "Voice Recognition" color ='black'/>
+      
     </header>
   )
 }
