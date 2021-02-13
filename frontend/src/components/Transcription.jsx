@@ -1,11 +1,11 @@
-const Transcription = ({ name }) => {
+const Transcription = () => {
     return (
       <form className='add-form' >
-        <div className='form-control'>
-          <label>Input File</label>
+        <div>
+          <label>Input File <br></br></label>
           <input
-            type='text'
-            placeholder='Select File.wav'
+            type='file'
+            accept="audio/*"
           />
         </div>
         <div className='form-control'>
