@@ -6,15 +6,18 @@ import Body from "./components/Body";
 
 
 const App = () => {
-  const [body, setBody] = useState()
+  const [selectBody, setBody] = useState()
+
   // We pass the text as a paremeter coming from the header file, which is coming from the button itself.
-  function showBody (text) {
-    console.log(text);
+  const showBody = (text) => {
+    setBody(text)
     }
+  
+
   return (
     <div className='container'>
       <Header title= 'Pick one application : ' onSelect ={showBody}/>
-      <Body/>
+      <Body selectBody = {selectBody}/>
       <Footer />
     </div>
   );
