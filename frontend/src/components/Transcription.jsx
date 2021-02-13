@@ -66,11 +66,4 @@ const Transcription = () => {
     )
   }
 
-  // Transcription.defaultProps = {
-    // language: "english",
-    // input : "",
-    // output : "",
-    // speech : "",
-  // }
-  
   export default Transcription
