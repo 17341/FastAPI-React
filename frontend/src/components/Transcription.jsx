@@ -1,26 +1,29 @@
 import { useState, useEffect } from 'react'
 
-const Transcription = () => {
-  const [input, setInput] = useState()
-  const [language, setLanguage] = useState("english")
-  const [output, setOutput] = useState()
-  const [speech, setSpeech] = useState()
+const Transcription = ({ handleSubmit }) => {
 
-  const handleSubmit = (e) => {
+  const [input, setInput] = useState('')
+  const [language, setLanguage] = useState("english")
+  const [output, setOutput] = useState('')
+  const [speech, setSpeech] = useState('')
+
+  const onSubmit = (e) => {
     e.preventDefault()
 
-    if ( !output || !input || !speech ) {
+    if ( !output  || !speech ) {
       alert('Please complete all the form')
       return
     }
-    console.log(input,output,language,speech)
+
+    handleSubmit({ output })
+     
     setInput('')
     setOutput('')
     setSpeech('')
   }
   
     return (
-      <form onSubmit = {handleSubmit} className='add-form' >
+      <form onSubmit = {onSubmit} className='add-form' >
         <div>
           <label>Input File <br></br></label>
           <input
